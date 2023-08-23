@@ -15,11 +15,14 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
+        # check if either list is empty
         if list1 is None:
             return list2
         if list2 is None:
             return list1
+        # check first node list1 against first node list2
         if list1.val < list2.val:
+            # determine the next value by calling mergeTwoLists on the next value in list1
             list1.next = self.mergeTwoLists(list1.next, list2)
             return list1
         else:
