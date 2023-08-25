@@ -63,3 +63,19 @@ class Solution(object):
             if haystack[i:i+needle_size] == needle:
                 return i
         return -1
+
+# 35. Search Insert Position
+# https://leetcode.com/problems/search-insert-position/description/
+class Solution(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if target in nums:
+            return nums.index(target)
+        else:
+            nums.append(target)
+            nums.sort()
+            return nums.index(target)
