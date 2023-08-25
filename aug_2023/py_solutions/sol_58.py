@@ -1,7 +1,13 @@
+# 58. Length of Last Word
+# https://leetcode.com/problems/length-of-last-word/description/
 # class Solution(object):
 def lengthOfLastWord(s):
-    lst = s.split(" ")
-    for i in range(len(lst) -1, -1, -1):
-        if lst[i] == "":
-            lst.remove(lst[i])
+        # """
+        # :type s: str
+        # :rtype: int
+        # """
+    lst = s.split()
+    print(lst)
     return len(lst[len(lst)-1])
+
+print(lengthOfLastWord("hello     world    sup?"))
