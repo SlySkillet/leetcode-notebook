@@ -21,3 +21,5 @@ class Solution(object):
                 result.append(n)
                 if len(result) == k:
                     return result
+
+# https://www.youtube.com/watch?v=YPTqKIgVk-k
