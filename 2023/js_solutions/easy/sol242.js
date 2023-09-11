@@ -22,3 +22,22 @@ var isAnagram = function(s, t) {
     }
     return true
 };
+
+// refactored solution with count objects
+var isAnagram = function(s, t) {
+    if (s.length !== t.length){
+        return false
+    }
+    sCount = {}
+    tCount = {}
+    for (let i=0; i < s.length; i++){
+        sCount[s[i]] ? sCount[s[i]] += 1 : sCount[s[i]] = 1
+        tCount[t[i]] ? tCount[t[i]] += 1 : tCount[t[i]] = 1
+    }
+    for (let char in sCount){
+        if (sCount[char] !== tCount[char]){
+            return false
+        }
+    }
+    return true
+};
