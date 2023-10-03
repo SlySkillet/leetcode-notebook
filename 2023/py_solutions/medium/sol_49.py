@@ -35,3 +35,20 @@ class Solution(object):
             hashmap[tuple(count)].append(s)
 
         return hashmap.values()
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # create a hashmap where default value is a list
+        hashmap = defaultdict(list)
+        # iterate over strs
+        for s in strs:
+            # create a count variable that is a list of 26 values for each letter of the alphabet. Initial value is 0
+            count = [0] * 26
+            # iterate over string
+            for c in s:
+                # take ord of letter, subtract ord('a') to get index of count character and add 1 at that index in the count list
+                count[ord(c) - ord('a')] += 1
+            # convert count list to a tuple so it is hashable and create a key in hashmap with that tuple and append the string to it
+            hashmap[tuple(count)].append(s)
+        # return list of hashmap values
+        return hashmap.values()
