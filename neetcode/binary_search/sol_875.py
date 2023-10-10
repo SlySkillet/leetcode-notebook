@@ -3,8 +3,9 @@
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        # piles.sort()
-        # why is it not necessary to sort the input?
+        """
+        why is it not necessary to sort the input? when we define k we effectively create an array of integers between 1 and the largest pile. Those are the values we perform the binary search on and for each check, it is run against each pile to determine how many hours it takes to eat each pile at rate 'k'
+        """
         l, r = 1 , max(piles)
         res = r
         while l <= r:
