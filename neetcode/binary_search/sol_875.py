@@ -1,5 +1,6 @@
 # 875. Koko Eating Bananas
 # https://leetcode.com/problems/koko-eating-bananas/description/
+import math
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
