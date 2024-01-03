@@ -21,3 +21,9 @@ def domain_name(url):
 """
 First run through, this is done in linear time, iterations will never pass the first 3 items of the input.
 """
+
+# Alternate Regex Solution:
+
+import re
+def domain_name(url):
+    return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
