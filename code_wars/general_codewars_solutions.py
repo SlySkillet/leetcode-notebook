@@ -23,7 +23,20 @@ First run through, this is done in linear time, iterations will never pass the f
 """
 
 # Alternate Regex Solution:
+# docs: https://docs.python.org/3/library/re.html?highlight=re#module-re
 
 import re
 def domain_name(url):
     return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
+
+
+# Mean Square Error
+# https://www.codewars.com/kata/51edd51599a189fe7f000015/train/python
+
+def solution(array_a, array_b):
+    return sum(
+            [(array_a[i] - array_b[i]) ** 2 for i in range(len(array_a))]
+        ) / len(array_a)
+
+def solution(a, b):
+    return sum((x - y)**2 for x, y in zip(a, b)) / len(a)
