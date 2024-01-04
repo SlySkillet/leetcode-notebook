@@ -40,3 +40,26 @@ def solution(array_a, array_b):
 
 def solution(a, b):
     return sum((x - y)**2 for x, y in zip(a, b)) / len(a)
+
+
+
+# Last digit of a large number
+# https://www.codewars.com/kata/5511b2f550906349a70004e1/python
+
+def last_digit(n1, n2):
+    return pow( n1, n2, 10 )
+
+digits = {
+    0:[0,0,0,0],
+    1:[1,1,1,1],
+    2:[2,4,8,6],
+    3:[3,9,7,1],
+    4:[4,6,4,6],
+    5:[5,5,5,5],
+    6:[6,6,6,6],
+    7:[7,9,3,1],
+    8:[8,4,2,6],
+    9:[9,1,9,1]
+}
+def last_digit(n1, n2):
+    return digits[n1%10][(n2-1)%4] if n2 else 1
