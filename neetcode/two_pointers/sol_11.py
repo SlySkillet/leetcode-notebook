@@ -1,5 +1,6 @@
 # 11. Container With Most Water
 # https://leetcode.com/problems/container-with-most-water/description/
+from typing import List
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
@@ -16,3 +17,19 @@ class Solution:
             else:
                 r -= 1
         return maxVol
+
+
+solution_instance = Solution()
+
+height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+max_area = solution_instance.maxArea(height)
+
+print("maximillian = ", max_area)
+
+import pandas as pd
+
+try:
+    pd.__version__
+    print("version: ", pd.__version__)
+except ImportError:
+    print("pandas not  installed")

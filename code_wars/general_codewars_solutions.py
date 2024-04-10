@@ -49,6 +49,7 @@ def solution(a, b):
 def last_digit(n1, n2):
     return pow( n1, n2, 10 )
 
+
 digits = {
     0:[0,0,0,0],
     1:[1,1,1,1],
@@ -61,5 +62,5 @@ digits = {
     8:[8,4,2,6],
     9:[9,1,9,1]
 }
-def last_digit(n1, n2):
+def last_digit2(n1, n2):
     return digits[n1%10][(n2-1)%4] if n2 else 1
