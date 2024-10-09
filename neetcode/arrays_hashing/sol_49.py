@@ -1,5 +1,13 @@
 # 49. Group Anagrams
 # https://leetcode.com/problems/group-anagrams/description/
+from collections import defaultdict
+#
+# ================ NOTE =================
+# this import was missing in the original code
+# https://docs.python.org/3/library/typing.html
+# research typing for a better understanding or a blog post
+#
+from typing import List
 
 class Solution(object):
     def groupAnagrams(self, strs):
@@ -19,7 +27,6 @@ class Solution(object):
         return result
 
 #  neetcode solution
-from collections import defaultdict
 class Solution(object):
     def groupAnagrams(self, strs):
         """
